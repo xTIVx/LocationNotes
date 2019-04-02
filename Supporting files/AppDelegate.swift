@@ -17,17 +17,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-        let nf = Folder.newFolder(name: "Aaa")
-        nf.addNote().name = "New note"
-        nf.addNote().name = "New note"
-        nf.addNote().name = "New note"
-        nf.addNote().name = "New note"
-        
-        CoreDataManager.sharedInstance.saveContext()
-        
-        print(folders.count)
-        print(folders[0].name ?? "")
-        print(notes.count)
+//        let nf = Folder.newFolder(name: "Aaa")
+//        nf.addNote().name = "New note"
+//        nf.addNote().name = "New note"
+//        nf.addNote().name = "New note"
+//        nf.addNote().name = "New note"
+//
+//        CoreDataManager.sharedInstance.saveContext()
+//
+//        print(folders.count)
+//        print(folders[0].name ?? "")
+//        print(notes.count)
         
         return true
     }
