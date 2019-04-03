@@ -23,6 +23,14 @@
 		460AE5F52226B34700EEA289 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460AE5F42226B34700EEA289 /* CoreDataManager.swift */; };
 		460AE5F7222C412600EEA289 /* FoldersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460AE5F6222C412600EEA289 /* FoldersTableViewController.swift */; };
 		460AE5FB222C4A6600EEA289 /* FolderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460AE5FA222C4A6600EEA289 /* FolderTableViewController.swift */; };
+		460AE5FD222C856000EEA289 /* NoteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460AE5FC222C856000EEA289 /* NoteTableViewController.swift */; };
+		460E12D72232E14A00C6E7BF /* SelectFolderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460E12D62232E14A00C6E7BF /* SelectFolderTableViewController.swift */; };
+		460E12DB223436B100C6E7BF /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460E12DA223436B100C6E7BF /* LocationManager.swift */; };
+		4666518B2253FDB000831C15 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4666518A2253FDB000831C15 /* StoreKit.framework */; };
+		4666518D225425B200831C15 /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4666518C225425B200831C15 /* StoreManager.swift */; };
+		4666CFB92234528F00307A62 /* NoteMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4666CFB82234528F00307A62 /* NoteMapViewController.swift */; };
+		4666CFBB2235B02900307A62 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4666CFBA2235B02900307A62 /* MapViewController.swift */; };
+		4666CFBD2235BF7600307A62 /* PriceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4666CFBC2235BF7600307A62 /* PriceManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +52,15 @@
 		460AE5F42226B34700EEA289 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		460AE5F6222C412600EEA289 /* FoldersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoldersTableViewController.swift; sourceTree = "<group>"; };
 		460AE5FA222C4A6600EEA289 /* FolderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderTableViewController.swift; sourceTree = "<group>"; };
+		460AE5FC222C856000EEA289 /* NoteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableViewController.swift; sourceTree = "<group>"; };
+		460E12D62232E14A00C6E7BF /* SelectFolderTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFolderTableViewController.swift; sourceTree = "<group>"; };
+		460E12DA223436B100C6E7BF /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		466651882253FD9300831C15 /* LocationNotes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LocationNotes.entitlements; sourceTree = "<group>"; };
+		4666518A2253FDB000831C15 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		4666518C225425B200831C15 /* StoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
+		4666CFB82234528F00307A62 /* NoteMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteMapViewController.swift; sourceTree = "<group>"; };
+		4666CFBA2235B02900307A62 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		4666CFBC2235BF7600307A62 /* PriceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4666518B2253FDB000831C15 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +80,8 @@
 			children = (
 				4609C735221F8B0A00B5255E /* LocationNotes */,
 				4609C734221F8B0A00B5255E /* Products */,
+				460E12D9223435CE00C6E7BF /* Supporting files */,
+				466651892253FDB000831C15 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -76,18 +96,49 @@
 		4609C735221F8B0A00B5255E /* LocationNotes */ = {
 			isa = PBXGroup;
 			children = (
+				466651882253FD9300831C15 /* LocationNotes.entitlements */,
+				4609C745221F8B0B00B5255E /* Info.plist */,
 				460AE5F32225D43C00EEA289 /* Model */,
 				460AE5F9222C4A0600EEA289 /* View */,
 				460AE5F8222C49E200EEA289 /* Controller */,
-				4609C736221F8B0A00B5255E /* AppDelegate.swift */,
-				4609C740221F8B0B00B5255E /* Assets.xcassets */,
-				4609C742221F8B0B00B5255E /* LaunchScreen.storyboard */,
-				4609C745221F8B0B00B5255E /* Info.plist */,
 			);
 			path = LocationNotes;
 			sourceTree = "<group>";
 		};
 		460AE5F32225D43C00EEA289 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4666CFBC2235BF7600307A62 /* PriceManager.swift */,
+				4666518C225425B200831C15 /* StoreManager.swift */,
+				460E12DA223436B100C6E7BF /* LocationManager.swift */,
+				460E12D82234359900C6E7BF /* CoreData */,
+			);
+			name = Model;
+			path = ../Model;
+			sourceTree = "<group>";
+		};
+		460AE5F8222C49E200EEA289 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				460AE5F6222C412600EEA289 /* FoldersTableViewController.swift */,
+				460AE5FA222C4A6600EEA289 /* FolderTableViewController.swift */,
+				460AE5FC222C856000EEA289 /* NoteTableViewController.swift */,
+				460E12D62232E14A00C6E7BF /* SelectFolderTableViewController.swift */,
+				4666CFB82234528F00307A62 /* NoteMapViewController.swift */,
+				4666CFBA2235B02900307A62 /* MapViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		460AE5F9222C4A0600EEA289 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4609C73A221F8B0A00B5255E /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		460E12D82234359900C6E7BF /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
 				4609C73D221F8B0A00B5255E /* LocationNotes.xcdatamodeld */,
@@ -101,25 +152,25 @@
 				460AE5E32225D42B00EEA289 /* Note+CoreDataClass.swift */,
 				460AE5F42226B34700EEA289 /* CoreDataManager.swift */,
 			);
-			name = Model;
-			path = ../Model;
+			path = CoreData;
 			sourceTree = "<group>";
 		};
-		460AE5F8222C49E200EEA289 /* Controller */ = {
+		460E12D9223435CE00C6E7BF /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
-				460AE5F6222C412600EEA289 /* FoldersTableViewController.swift */,
-				460AE5FA222C4A6600EEA289 /* FolderTableViewController.swift */,
+				4609C736221F8B0A00B5255E /* AppDelegate.swift */,
+				4609C740221F8B0B00B5255E /* Assets.xcassets */,
+				4609C742221F8B0B00B5255E /* LaunchScreen.storyboard */,
 			);
-			path = Controller;
+			path = "Supporting files";
 			sourceTree = "<group>";
 		};
-		460AE5F9222C4A0600EEA289 /* View */ = {
+		466651892253FDB000831C15 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				4609C73A221F8B0A00B5255E /* Main.storyboard */,
+				4666518A2253FDB000831C15 /* StoreKit.framework */,
 			);
-			path = View;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +205,14 @@
 				TargetAttributes = {
 					4609C732221F8B0A00B5255E = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.ApplePay = {
+								enabled = 0;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -195,15 +254,22 @@
 			files = (
 				460AE5ED2225D42B00EEA289 /* ImageNote+CoreDataClass.swift in Sources */,
 				460AE5FB222C4A6600EEA289 /* FolderTableViewController.swift in Sources */,
+				460E12D72232E14A00C6E7BF /* SelectFolderTableViewController.swift in Sources */,
 				460AE5F02225D42B00EEA289 /* Folder+CoreDataProperties.swift in Sources */,
+				4666CFBD2235BF7600307A62 /* PriceManager.swift in Sources */,
+				460E12DB223436B100C6E7BF /* LocationManager.swift in Sources */,
 				460AE5EF2225D42B00EEA289 /* Folder+CoreDataClass.swift in Sources */,
+				4666CFB92234528F00307A62 /* NoteMapViewController.swift in Sources */,
 				460AE5EB2225D42B00EEA289 /* Note+CoreDataClass.swift in Sources */,
 				460AE5F22225D42B00EEA289 /* Location+CoreDataProperties.swift in Sources */,
 				460AE5EC2225D42B00EEA289 /* Note+CoreDataProperties.swift in Sources */,
+				460AE5FD222C856000EEA289 /* NoteTableViewController.swift in Sources */,
 				460AE5F7222C412600EEA289 /* FoldersTableViewController.swift in Sources */,
 				460AE5EE2225D42B00EEA289 /* ImageNote+CoreDataProperties.swift in Sources */,
+				4666CFBB2235B02900307A62 /* MapViewController.swift in Sources */,
 				460AE5F12225D42B00EEA289 /* Location+CoreDataClass.swift in Sources */,
 				4609C737221F8B0A00B5255E /* AppDelegate.swift in Sources */,
+				4666518D225425B200831C15 /* StoreManager.swift in Sources */,
 				4609C73F221F8B0A00B5255E /* LocationNotes.xcdatamodeld in Sources */,
 				460AE5F52226B34700EEA289 /* CoreDataManager.swift in Sources */,
 			);
@@ -354,6 +420,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3F2Q7FQ47R;
 				INFOPLIST_FILE = LocationNotes/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -372,6 +439,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3F2Q7FQ47R;
 				INFOPLIST_FILE = LocationNotes/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

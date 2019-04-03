@@ -4,10 +4,11 @@
 //
 //  Created by Igor Chernobai on 2/21/19.
 //  Copyright © 2019 Igor Chernobai. All rights reserved.
-//
+//  LocationNotes.fullVersion
 
 import UIKit
 import CoreData
+import StoreKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,20 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     let saveData = CoreDataManager()
 
+    var priceManager = PriceManager()
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-//        let nf = Folder.newFolder(name: "Aaa")
-//        nf.addNote().name = "New note"
-//        nf.addNote().name = "New note"
-//        nf.addNote().name = "New note"
-//        nf.addNote().name = "New note"
-//
-//        CoreDataManager.sharedInstance.saveContext()
-//
-//        print(folders.count)
-//        print(folders[0].name ?? "")
-//        print(notes.count)
-        
+        priceManager.getPriceForProduct(idProduct: "LocationNotes.fullVersion")
+     
         return true
     }
 

@@ -9,8 +9,10 @@
 import UIKit
 
 class FoldersTableViewController: UITableViewController {
+    
 
     @IBAction func pushAddAction(_ sender: UIBarButtonItem) {
+        
         
        let alertController = UIAlertController(title: "Create New Folder", message: "", preferredStyle: .alert)
         
@@ -21,7 +23,7 @@ class FoldersTableViewController: UITableViewController {
         let alertActionAdd = UIAlertAction(title: "Create", style: .default) { (alert) in
             let folderName = alertController.textFields?[0].text
             if folderName != "" {
-                _ = Folder.newFolder(name: folderName!)
+                _ = Folder.newFolder(name: folderName!.uppercased())
                 CoreDataManager.sharedInstance.saveContext()
                 self.tableView.reloadData()
             }
@@ -40,8 +42,12 @@ class FoldersTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+       LocationManager.sharedInstance.requestAuthorization()
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
     }
 
     // MARK: - Table view data source
@@ -62,6 +68,7 @@ class FoldersTableViewController: UITableViewController {
 
         let folderInCell = folders[indexPath.row]
         cell.textLabel?.text = folderInCell.name
+        cell.detailTextLabel?.text = "\(folderInCell.notes!.count) item(-s)"
         
         return cell
     }

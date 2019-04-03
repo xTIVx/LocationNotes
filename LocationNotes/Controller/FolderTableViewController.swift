@@ -9,13 +9,53 @@
 import UIKit
 
 class FolderTableViewController: UITableViewController {
+    
+    var buyingForm = BuyingForm()
 
     var folder : Folder?
+    var notesActual: [Note] {
+        if let folder = folder {
+            return folder.notesSorted
+        }else {
+            return notes
+        }
+    }
+    
+    var selectedNote: Note?
+    
+    @IBAction func pushAddAction(_ sender: UIBarButtonItem) {
+        
+        if buyingForm.isNeedToShow {
+            buyingForm.showForm(inController: self)
+            return
+        }
+        
+        selectedNote = Note.newNote(name: "Test", inFolder: folder)
+        selectedNote?.addCurrentLocation()
+        performSegue(withIdentifier: "goToNote", sender: self)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToNote" {
+            (segue.destination as! NoteTableViewController).note = selectedNote
+        }
+    }
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        if let folder = folder {
+            navigationItem.title = folder.name
+        }else {
+            navigationItem.title = "All notes"
+        }
        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
     }
 
     // MARK: - Table view data source
@@ -27,19 +67,31 @@ class FolderTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return folder!.notes!.count
+        return notesActual.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CellNote", for: indexPath)
 
-        let noteInCell = folder?.notesSorted[indexPath.row]
+        let noteInCell = notesActual[indexPath.row]
         
-        cell.textLabel?.text = noteInCell?.name
-        cell.detailTextLabel?.text = noteInCell?.dateUpdateString
-
+        cell.textLabel?.text = noteInCell.name
+        cell.detailTextLabel?.text = noteInCell.dateUpdateString
+        if noteInCell.imageSmall != nil {
+            cell.imageView?.image = UIImage(data: noteInCell.imageSmall! as Data )
+        } else {
+            cell.imageView?.image = nil
+        }
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let noteInCell = notesActual[indexPath.row]
+        selectedNote = noteInCell
+        performSegue(withIdentifier: "goToNote", sender: self)
+        
     }
  
 
@@ -51,17 +103,18 @@ class FolderTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            // Delete the row from the data source
+            CoreDataManager.sharedInstance.managedObjectContext.delete(notesActual[indexPath.row])
+            CoreDataManager.sharedInstance.saveContext()
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
+    
 
     /*
     // Override to support rearranging the table view.

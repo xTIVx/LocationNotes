@@ -14,8 +14,6 @@
 	<string>$(PRODUCT_NAME)</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Can i use your location?</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
@@ -24,6 +22,8 @@
 	<true/>
 	<key>NSCameraUsageDescription</key>
 	<string>Can i use camera?</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Can i use your location?</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Can i use photo?</string>
 	<key>UILaunchStoryboardName</key>
