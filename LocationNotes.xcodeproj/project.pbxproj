@@ -30,6 +30,7 @@
 		4666518D225425B200831C15 /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4666518C225425B200831C15 /* StoreManager.swift */; };
 		4666518F2254DA6600831C15 /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4666518E2254DA6600831C15 /* NoteCell.swift */; };
 		46665191225529C500831C15 /* icon_photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 46665190225529C500831C15 /* icon_photo.png */; };
+		466651A12256323000831C15 /* LSLocation.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 466651A02256323000831C15 /* LSLocation.jpg */; };
 		4666CFB92234528F00307A62 /* NoteMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4666CFB82234528F00307A62 /* NoteMapViewController.swift */; };
 		4666CFBB2235B02900307A62 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4666CFBA2235B02900307A62 /* MapViewController.swift */; };
 		4666CFBD2235BF7600307A62 /* PriceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4666CFBC2235BF7600307A62 /* PriceManager.swift */; };
@@ -62,6 +63,7 @@
 		4666518C225425B200831C15 /* StoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
 		4666518E2254DA6600831C15 /* NoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
 		46665190225529C500831C15 /* icon_photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_photo.png; sourceTree = "<group>"; };
+		466651A02256323000831C15 /* LSLocation.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = LSLocation.jpg; path = ../../LeadsmanChat/LeadsmanChat/Assets.xcassets/LaunchImage.launchimage/LSLocation.jpg; sourceTree = "<group>"; };
 		4666CFB82234528F00307A62 /* NoteMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteMapViewController.swift; sourceTree = "<group>"; };
 		4666CFBA2235B02900307A62 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		4666CFBC2235BF7600307A62 /* PriceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceManager.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 		460E12D9223435CE00C6E7BF /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
+				466651A02256323000831C15 /* LSLocation.jpg */,
 				4609C736221F8B0A00B5255E /* AppDelegate.swift */,
 				46665190225529C500831C15 /* icon_photo.png */,
 				4609C740221F8B0B00B5255E /* Assets.xcassets */,
@@ -248,6 +251,7 @@
 				4609C744221F8B0B00B5255E /* LaunchScreen.storyboard in Resources */,
 				4609C741221F8B0B00B5255E /* Assets.xcassets in Resources */,
 				4609C73C221F8B0A00B5255E /* Main.storyboard in Resources */,
+				466651A12256323000831C15 /* LSLocation.jpg in Resources */,
 				46665191225529C500831C15 /* icon_photo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

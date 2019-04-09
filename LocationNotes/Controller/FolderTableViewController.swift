@@ -45,7 +45,6 @@ class FolderTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         if let folder = folder {
             navigationItem.title = folder.name
         }else {

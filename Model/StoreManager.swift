@@ -20,6 +20,7 @@ class StoreManager: NSObject {
         }
     }
     
+    
     func buyFullVersion() {
         if let fullVersionProduct = fullVersionProduct {
             let payment = SKPayment(product: fullVersionProduct)

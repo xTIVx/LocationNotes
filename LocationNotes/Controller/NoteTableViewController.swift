@@ -127,6 +127,24 @@ class NoteTableViewController: UITableViewController {
         navigationController?.popViewController(animated: true)
     }
     
+    
+    
+   
+    
+    @IBAction func pushShareAction(_ sender: UIBarButtonItem) {
+        var activities : [Any] = []
+        
+        if let image = note?.imageeActual {
+            activities.append(image)
+        }
+        activities.append(note?.name ?? "")
+        activities.append(note?.textDescription ?? "")
+        let activityController = UIActivityViewController(activityItems: activities, applicationActivities: nil)
+        present(activityController, animated: true, completion: nil)
+    }
+    
+    
+    
 }
 
 
