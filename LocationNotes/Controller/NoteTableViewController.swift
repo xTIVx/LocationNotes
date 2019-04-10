@@ -81,8 +81,11 @@ class NoteTableViewController: UITableViewController {
                 
                 tableView.deselectRow(at: indexPath, animated: true)
             }
+            if UIImagePickerController.isCameraDeviceAvailable(UIImagePickerController.CameraDevice.rear) || UIImagePickerController.isCameraDeviceAvailable(UIImagePickerController.CameraDevice.front) {
             alertController.addAction(a1Camera)
-            
+            } else {
+                print("Camera is not available!")
+            }
             let a2Photo = UIAlertAction(title: "Select from library", style: .default) { (alert) in
                 self.imagePicker.sourceType = .savedPhotosAlbum
                 self.imagePicker.delegate = self
